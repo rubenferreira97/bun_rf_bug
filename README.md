@@ -24,19 +24,24 @@ When using `bun rm -rf` to remove a directory containing a symlink (e.g., `node_
 ## Steps to Reproduce
 
 1. Clone this repository
-2. Navigate to the `project/` directory:
+2. Navigate to the `project_link` directory and create link.
+    ```cmd
+    cd project_link
+    bun link
+    ```
+3. Navigate to the `project/` directory:
    ```cmd
-   cd project
+   cd ../project
    ```
-3. Install dependencies (this creates a symlink in `node_modules`):
+4. Install dependencies (this creates a symlink in `node_modules`):
    ```cmd
    bun install
    ```
-4. Run the clean script:
+5. Run the clean script:
    ```cmd
    bun clean
    ```
-5. Observe that `project_link/` directory contents are deleted!
+6. Observe that `project_link/` directory contents are deleted!
 
 ## Expected Behavior
 
